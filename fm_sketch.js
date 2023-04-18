@@ -5,7 +5,7 @@ let newWidth = 10;
 let slider;
 
 function preload() {
-  img = loadImage("images/egg.png");
+  img = loadImage("egg.png");
   slider = createSlider(1, 100, newWidth, 1)
 }
 
