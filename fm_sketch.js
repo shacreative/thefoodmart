@@ -10,9 +10,11 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(400, 400);
-  noStroke();
-}
+  let foodprojector = createCanvas(400, 400);
+  foodprojector.parent("p5-script")
+   noStroke();
+   slider = select('#yeardate');
+ }
 
 function draw() {
   newWidth = slider.value();
