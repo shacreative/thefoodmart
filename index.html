@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- p5js library -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+
+    <title>FoodMart</title>
+
+     <!--Google Fonts-->
+     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+
+ <!--Stylesheets-->
+ <link rel="stylesheet" href="all_foodmart.css" />
+ <link rel="stylesheet" href="breakingpoints_890.css" />
+
+
+    <!--jquery + tweenmax cdns -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  </head>
+
+  <body>
+
+    <!--Desktop Navbar Section -->
+
+    <nav>
+      <div class="menu-nav-bar">
+        <button class="menu-btn" onClick="toggleMenu()">Menu</button>
+        <div class="menu-list-container">
+          <div class="items-section">
+            <ul class="navlist">
+              <li><a class="anchor-menu" href="#home">Intro</a></li>
+              <li><a class="anchor-menu" href="#projector">Projector</a></li>
+              <li><a class="anchor-menu" href="#digifoods">Digi Foods</a></li>
+              <li><a class="anchor-menu" href="#video">Video</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    
+  
+    <!-- Hero Section -->
+<main>
+      <div class="hero" id="home"></div>
+      
+
+        <!-- Intro Section -->
+        <hr class="divider1"></hr>
+
+      <div class="intro__grid" id="intro">
+        <div class="intro__content">
+        <img class="MainSectionTitle" src="foodmart-02.svg">
+        <h1 class="intro__heading"></h1>
+        <p class="intro__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Aenean efficitur tristique accumsan. Nam varius vulputate erat. Aliquam
+            elementum ullamcorper justo id congue. Maecenas auctor metus orci, vitae
+            fermentum ligula fringilla eget. Quisque iaculis est nec orci pharetra varius.
+            Cras eleifend consequat neque, in varius sem varius a. Quisque lacinia posuere nulla,
+            id molestie eros maximus non. Nullam eget arcu at erat fermentum ullamcorper. Integer
+            sit amet semper magna. Vestibulum mattis fermentum erat. Nulla lectus nunc, varius vel
+            vulputate et, vulputate non velit.</p>
+        </div>
+      </div>
+
+        <hr class="divider2"></hr>
+
+
+
+<!-- Projector Section -->
+
+<div class="projector-title__grid" id="projector">
+    <div class="projector-title__content">
+    <img class="projectortitle-img" src="Projector_Title_01.svg">
+    </div>
+</div>
+<hr class="divider2"></hr>
+
+<div class="projector_grid">
+    <div class="projector__container">
+    
+    p5 js canvas here
+
+     <!--Projector Product-->
+    <div class="projector_grid">
+        <div class="projector_product">    
+            <div class="digi_image_col">
+                <img class="digi_thumbnail" src="diamond_image.png">
+            </div>
+                <script src="fm_sketch.js"></script>
+            </div>
+            <div class="projector-info__grid">
+                <p class= "projector-info-title"> Item</p>
+                <p id= "projector-info-item"> Egg</p>
+                <p class= "projector-info-title"> Price</p>
+                <p id= "projector-info-price"> &Dstrok;£2000</p>
+                <p class= "projector-info-title"> Value</p>
+                <p id= "projector-info-rarity"> Rare </p>
+                <p class= "projector-info-title"> Ingredients</p>
+                <p id= "projector-info-ingredient"> 100% Digital</p>
+        
+            </div>
+        </div>
+</div>
+
+</div></div>
+
+  <hr class="divider1"></hr>
+
+        <!--Digi Foods Section -->
+
+        <div class="dig-intro__grid" id="digifoods">
+            <div class="digi-intro__content">
+            <img class="digi__title" src="Digi-Food-Title.svg">
+            <h2 class="digi__heading"></h2>
+            <p class="digi__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Aenean efficitur tristique accumsan. Nam varius vulputate erat. Aliquam
+                elementum ullamcorper justo id congue. Maecenas auctor metus orci, vitae
+                fermentum ligula fringilla eget. Quisque iaculis est nec orci pharetra varius.
+                Cras eleifend consequat neque, in varius sem varius a. Quisque lacinia posuere nulla,
+                id molestie eros maximus non. Nullam eget arcu at erat fermentum ullamcorper. Integer
+                sit amet semper magna. Vestibulum mattis fermentum erat. Nulla lectus nunc, varius vel
+                vulputate et, vulputate non velit.</p>
+          </div>
+        </div>
+
+          <hr class="divider2"></hr>
+
+          <div class="digi-food-grid">
+            <!--Product One -->
+            <div class="digifood_product">    
+                <div class="digi_image_col">
+                    <img class="digi_thumbnail" src="diamond_image.png">
+                </div>
+                <div class="food-info__grid">
+                    <p class= "food-info-title"> Item</p>
+                    <p class= "food-info-value"> Tomato</p>
+                    <p class= "food-info-title"> Ingredients</p>
+                    <p class= "food-info-value"> 100% Digital</p>
+                    <p class= "food-info-title"> Value</p>
+                    <p class= "food-info-value"> Rare </p>
+                    <p class= "food-info-title"> Price</p>
+                    <p class= "food-info-value"> &Dstrok;£2000</p>
+                </div>
+            </div>
+    
+   
+               <!--Product Two -->
+               <div class="digifood_product">    
+                <div class="digi_image_col">
+                    <img class="digi_thumbnail" src="diamond_image.png">
+                </div>
+                <div class="food-info__grid">
+                    <p class= "food-info-title"> Item</p>
+                    <p class= "food-info-value"> Apple </p>
+                    <p class= "food-info-title"> Ingredients</p>
+                    <p class= "food-info-value"> 100% Digital</p>
+                    <p class= "food-info-title"> Value</p>
+                    <p class= "food-info-value"> Super Rare </p>
+                    <p class= "food-info-title"> Price</p>
+                    <p class= "food-info-value"> &Dstrok;£2000</p>
+                </div>
+             </div>
+          </div>
+
+
+<!--Video Section -->
+       <hr class="divider1"></hr>
+       
+       <div class="video-media__grid" id="video">
+       <div class="video__container">
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/n4pRaRMy6VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+       </div>
+
+<!--Date and Time Section -->
+
+<hr class="divider2"></hr>
+
+<div class="date-time__grid">
+    <h2 class="current-date"></h2>
+    <h2 class="current-time"></h2>
+</div>
+
+
+<hr class="divider2"></hr>
+
+<!--Have a Nice Day Section -->
+       <div class="nice-day__grid">
+        <div class="nice-day__container"> <p class= "niceday"> Have a <br> nice day!</p></div>
+    </div>
+       <hr class="divider1"></hr>
+       <br>
+
+
+
+
+</main>
+
+<script src="main_javascript.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,128 @@
+@media only screen and (max-width: 890px) {
+    /* For mobile phones: */
+ 
+ 
+    .body {
+       width: 100%;
+  }
+
+/* Dividers */
+
+.divider1
+{
+   display: block;
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+   align-items: center;
+   border-style: solid;
+   border-width: 1.5px;
+}
+
+.divider2
+{
+   display: block;
+   width: 90%;
+   margin-left: auto;
+   margin-right: auto;
+   align-items: center;
+   border-style: dashed;
+   border-width: 1.5px;
+}
+
+ 
+.intro__content, .digi-intro__content{
+   margin-left: 50px;
+   margin-right: 50px;
+   margin-top: 35px;
+   margin-bottom: 50px;
+   align-items: center;
+   color: rgb(0, 0, 0);
+   background-color: #F3F2EE;
+}
+
+
+  .intro__description,   .digi__description
+ {
+    margin-top: 10px;
+    display: block;
+    font-family: "Darker Grotesque", sans-serif;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    padding-right: 70px;
+    padding-left: 70px;
+ }
+
+ /*Digi Food Products*/
+
+ .digi-food-grid {
+   display: grid;
+   columns: 100px;
+   box-sizing: border-box;
+   grid-template-columns: 1fr 1fr;
+   column-gap: 50px;
+   row-gap: 40px;
+   margin-top: 30px;
+   margin-left: 40px;
+   margin-right: 40px;
+ }
+
+
+.food-info__grid{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   margin-top: 20px;
+   margin-bottom: 60px;
+   
+}
+
+.food-info-title{
+   font-family: VT323;
+   font-weight: 900;
+   font-size: 30px;
+   text-transform: uppercase;
+   line-height: 35px;
+   border-bottom: 2px solid #000;
+   padding-top: 9px;
+   
+}
+
+.food-info-value{
+   font-weight: 400;
+   font-size: 25px;
+   line-height: 30px;
+   border-bottom: 2px solid #000;
+   padding-top: 9px;
+   align-items: end;
+}
+
+.nice-day__container
+{
+  padding-bottom: 20px;
+  padding-right: 80px;
+  margin-top: 40px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  align-items: end;
+}
+
+.niceday{
+   font-family: "VT323", monospace;
+   text-align: center;
+   letter-spacing: 0.5px;
+   text-decoration: none;
+   font-weight: 300;
+   font-size: 85px;
+   line-height: 75px;
+   text-transform: uppercase;
+ }
+ 
+
+
+
+
+ }
