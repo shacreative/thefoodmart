@@ -32,23 +32,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   </head>
   <body>
+    <!-- Projector Section -->
+
+    <div class="projector-title__grid" id="projector">
+      <div class="projector-title__content">
+        <img class="projectortitle-img" src="Projector_Title_01.svg" />
+      </div>
+    </div>
+    <hr class="divider2" />
     <div class="projector_grid">
       <div class="projector__container">
         <!--Projector Product-->
         <div class="projector_grid">
           <div class="projector_product">
-            <div class="digi_image_col">
-              <img class="digi_thumbnail" src="diamond_image.png" />
-            </div>
-
             <div id="p5-script"></div>
             <div class="slidecontainer">
               <input
                 type="range"
-                min="1"
+                min="0"
                 max="100"
                 value="10"
-                step="1"
+                step="10"
                 class="slider"
                 id="yeardate"
               />
@@ -59,7 +63,9 @@
             <p class="projector-info-title">Item</p>
             <p id="projector-info-item">Egg</p>
             <p class="projector-info-title">Price</p>
-            <p id="projector-info-price">&Dstrok;£2000</p>
+            <p id="projector-info-price">
+              &Dstrok;£<span id="price-number">2000</span>
+            </p>
             <p class="projector-info-title">Value</p>
             <p id="projector-info-rarity">Rare</p>
             <p class="projector-info-title">Ingredients</p>
@@ -68,5 +74,7 @@
         </div>
       </div>
     </div>
+
+    <!-- End of Projector Section -->
   </body>
 </html>
