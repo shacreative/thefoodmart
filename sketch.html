@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test sketch</title>
+
+    <!-- p5js library -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+
+    <title>FoodMart</title>
+
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="all_foodmart.css" />
+    <link rel="stylesheet" href="breakingpoints_890.css" />
+
+    <!--jquery + tweenmax cdns -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  </head>
+  <body>
+    <div class="projector_grid">
+      <div class="projector__container">
+        <!--Projector Product-->
+        <div class="projector_grid">
+          <div class="projector_product">
+            <div class="digi_image_col">
+              <img class="digi_thumbnail" src="diamond_image.png" />
+            </div>
+
+            <div id="p5-script"></div>
+            <div class="slidecontainer">
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value="10"
+                step="1"
+                class="slider"
+                id="yeardate"
+              />
+            </div>
+            <script src="fm_sketch.js"></script>
+          </div>
+          <div class="projector-info__grid">
+            <p class="projector-info-title">Item</p>
+            <p id="projector-info-item">Egg</p>
+            <p class="projector-info-title">Price</p>
+            <p id="projector-info-price">&Dstrok;£2000</p>
+            <p class="projector-info-title">Value</p>
+            <p id="projector-info-rarity">Rare</p>
+            <p class="projector-info-title">Ingredients</p>
+            <p id="projector-info-ingredient">100% Digital</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

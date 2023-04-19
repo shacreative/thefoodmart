@@ -6,15 +6,15 @@ let slider;
 
 function preload() {
   img = loadImage("egg.png");
-  slider = createSlider(1, 100, newWidth, 1)
+  // slider = createSlider(1, 100, newWidth, 1)
 }
 
 function setup() {
   let foodprojector = createCanvas(400, 400);
-  foodprojector.parent("p5-script")
-   noStroke();
-   slider = select('#yeardate');
- }
+  foodprojector.parent("p5-script");
+  noStroke();
+  slider = select("#yeardate");
+}
 
 function draw() {
   newWidth = slider.value();
