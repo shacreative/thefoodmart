@@ -24,15 +24,54 @@ button {
   width: min(60vw, 60vh);
   height: 400px;
 }
+
+/** Slider CSS ***/
 #yeardate {
-  margin-top: 10px;
+  margin-top: 70px;
   width: min(60vw, 60vh);
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-canvas {
-  /* width: 400px;
-  height: 400px; */
+/* Track Styles for: Chrome, Safari, Opera, and Edge */
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 0.2rem;
+  background: #000000; /* Grey background */
+  outline: none;
+  cursor: pointer;
 }
+
+/* Track Styles for: Firefox */
+input[type="range"]::-moz-range-track {
+  background: #053a5f;
+  height: 0.5rem;
+}
+
+/* Thumb Styles for: Chrome, Safari, Opera, and Edge */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  border-radius: 2rem;
+  margin-top: -1rem; /* Centers thumb on the track */
+  background-color: #000000;
+  height: 2rem;
+  width: 2rem;    
+}
+
+/* Thumb Styles for: Firefox */
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 2rem; /*Removes default border-radius that FF applies*/
+  background-color: #000000;
+  height: 2rem;
+  width: 2rem;
+}
+
+
+/*canvas {
+  /* width: 400px;
+  height: 400px;
+} */
 
 /* menu css */
 li,
@@ -247,8 +286,8 @@ main {
 
 #projector-info-item,
 #projector-info-price,
-#projector-info-rarity,
-#projector-info-ingredient {
+#projector-info-year,
+#projector-info-rarity {
   font-weight: 400;
   font-size: 30px;
   line-height: 35px;

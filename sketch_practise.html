@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practise test sketch</title>
+
+    <!-- p5js library -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
+
+    <title>FoodMart</title>
+
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Stylesheets-->
+    <link rel="stylesheet" href="all_foodmart.css" />
+    <link rel="stylesheet" href="breakingpoints_890.css" />
+
+    <!--jquery + tweenmax cdns -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  </head>
+  <body>
+    <!-- Projector Section -->
+
+    <div class="projector-title__grid" id="projector">
+      <div class="projector-title__content">
+        <img class="projectortitle-img" src="Projector_Title_01.svg" />
+      </div>
+    </div>
+    <hr class="divider2" />
+    <div class="projector_grid">
+      <div class="projector__container">
+        <!--Projector Product-->
+        <div class="projector_grid">
+          <div class="projector_product">
+            <div id="p5-script"></div>
+            <div class="slidecontainer">
+              <div class="show-value"></div>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="10"
+                step="10"
+                class="slider"
+                id="yeardate"
+              />
+            </div>
+            <script src="fm_sketch_practise.js"></script>
+          </div>
+          <div class="projector-info__grid">
+            <p class="projector-info-title">Item</p>
+            <p id="projector-info-item">Egg</p>
+            <p class="projector-info-title">Price</p>
+            <p id="projector-info-price">£<span id="price-number"></span></p>
+            <p class="projector-info-title">Year</p>
+            <p id="projector-info-year"></p>
+            <p class="projector-info-title">Value</p>
+            <p id="projector-info-rarity"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End of Projector Section -->
+  </body>
+</html>
