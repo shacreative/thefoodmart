@@ -31,7 +31,7 @@ let costPerYear = (originalPrice * 6) / 100;
 let priceElement;
 
 function preload() {
-  img = loadImage("egg.png");
+  img = loadImage("fried_egg_no-pixel_500.png");
   // slider = createSlider(1, 100, newWidth, 1)
 }
 
@@ -65,8 +65,8 @@ function draw() {
 
   yearElement.html(startYear + (slider.value() / 10) * jump);
 
-  let valueInfo = ["Common", "Sufficient", "Limited", "Super Rare"];
-  let valueIndex = Math.floor((slider.value() / 100) * valueInfo.length);
+  let valueInfo = ["Plenty", "Sufficient", "Limited", "Super Rare"];
+  let valueIndex = Math.floor((slider.value() / 101) * valueInfo.length);
   valueElement.html(valueInfo[valueIndex]);
 
   clear();

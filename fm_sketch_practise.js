@@ -3,21 +3,30 @@
 let img;
 let newWidth = 10;
 let slider;
+let sliderMin;
+let sliderMax;
+let sliderGap;
 let cWidth;
 let canvasParent = document.getElementById("p5-script");
 let startYear = 2001;
-const d = new Date();
-let currentYear = d.getFullYear();
 
-let jump = currentYear - startYear;
-console.log(jump);
-let originalPrice = 0.39; // Price of eggs in 2001
+// get the current year and calculate the jump
+// const d = new Date();
+// let currentYear = d.getFullYear();
+// let jump = currentYear - startYear;
+let jump = 22;
+
+let originalPrice = 0.39;
+let priceIn2023 = 1.4;
+let inflation = (priceIn2023 - originalPrice) / originalPrice;
+console.log("inflation: ", inflation);
+let costPerYear = (originalPrice * 6) / 100;
+
 //let priceIn2023 = 1.40; // Price off eggs in 2023
 //let annualInflationRate = 0.1177; // (11.77% is Average annual inflation rate from 2001 to 2023
 //let costPerDecade = originalPrice * annualInflationRate;
 //let numberOfYears = 10; // Number of years from 2023 to 2033
 //const priceInYear = priceIn2001 * Math.pow((1 + annualInflationRate), years);
-let costPerYear = (originalPrice * 6) / 100;
 
 let priceElement;
 
@@ -36,50 +45,30 @@ function setup() {
   priceElement = select("#price-number");
   yearElement = select("#projector-info-year");
   valueElement = select("#projector-info-rarity");
+  sliderMin = slider.elt.getAttribute("min");
+  sliderMax = slider.elt.getAttribute("max");
 }
 
 function draw() {
-  let max = slider.elt.getAttribute("max");
-  newWidth = max - slider.value();
+  newWidth = sliderMax - slider.value();
   if (newWidth == 0) newWidth = 1;
 
+  // console.log(Math.pow(1 + inflation, slider.value() / 10));
+  let newPrice = originalPrice * Math.pow(1 + inflation, slider.value() / 10);
   // change the price
   let price = originalPrice + (slider.value() * costPerYear) / 10;
   // round to 2 decimal places
   price = Math.round(price * 100) / 100;
   // add trailing zeros
   price = price.toFixed(2);
-  priceElement.html(price);
+  priceElement.html(newPrice.toFixed(2));
 
-  // Change the Year Info
+  yearElement.html(startYear + (slider.value() / 10) * jump);
 
-  let yearInfo = {
-    1: "2001",
-    2: "2023",
-    [3]: "2033",
-    [4]: "2043",
-    [5]: "2053",
-    [6]: "2063",
-    [7]: "2073",
-    [8]: "2083",
-    [9]: "2093",
-    [10]: "2103",
-  };
+  let valueInfo = ["Plenty", "Sufficient", "Limited", "Super Rare"];
+  let valueIndex = Math.floor((slider.value() / 101) * valueInfo.length);
+  valueElement.html(valueInfo[valueIndex]);
 
-  yearElement.html(startYear);
-
-  // Change Product Value Info
-
-  let valueInfo = {
-    [1]: "Common",
-    [4]: "Sufficient",
-    [6]: "Limited",
-    [8]: "Super Rare",
-  };
-
-  valueElement.html(valueInfo);
-
-  //background of canvas
   clear();
   // create a blank new image
   let sample = createImage(newWidth, newWidth);
