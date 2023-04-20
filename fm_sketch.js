@@ -65,6 +65,10 @@ function draw() {
 
   yearElement.html(startYear + (slider.value() / 10) * jump);
 
+  let valueInfo = ["Common", "Sufficient", "Limited", "Super Rare"];
+  let valueIndex = Math.floor((slider.value() / 100) * valueInfo.length);
+  valueElement.html(valueInfo[valueIndex]);
+
   clear();
   // create a blank new image
   let sample = createImage(newWidth, newWidth);
