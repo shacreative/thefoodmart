@@ -5,7 +5,12 @@ let newWidth = 10;
 let slider;
 let cWidth;
 let canvasParent = document.getElementById("p5-script");
+let startYear = 2001;
+const d = new Date();
+let currentYear = d.getFullYear();
 
+let jump = currentYear - startYear;
+console.log(jump);
 let originalPrice = 0.39; // Price of eggs in 2001
 //let priceIn2023 = 1.40; // Price off eggs in 2023
 //let annualInflationRate = 0.1177; // (11.77% is Average annual inflation rate from 2001 to 2023
@@ -13,7 +18,6 @@ let originalPrice = 0.39; // Price of eggs in 2001
 //let numberOfYears = 10; // Number of years from 2023 to 2033
 //const priceInYear = priceIn2001 * Math.pow((1 + annualInflationRate), years);
 let costPerYear = (originalPrice * 6) / 100;
-
 
 let priceElement;
 
@@ -47,23 +51,22 @@ function draw() {
   price = price.toFixed(2);
   priceElement.html(price);
 
-
   // Change the Year Info
 
   let yearInfo = {
-  1: "2001",
-  2: "2023",
-  [3]: "2033",
-  [4]: "2043",
-  [5]: "2053",
-  [6]: "2063",
-  [7]: "2073",
-  [8]: "2083",
-  [9]: "2093",
-  [10]: "2103",
-};
+    1: "2001",
+    2: "2023",
+    [3]: "2033",
+    [4]: "2043",
+    [5]: "2053",
+    [6]: "2063",
+    [7]: "2073",
+    [8]: "2083",
+    [9]: "2093",
+    [10]: "2103",
+  };
 
-  yearElement.html(yearInfo); 
+  yearElement.html(startYear);
 
   // Change Product Value Info
 
@@ -74,13 +77,9 @@ function draw() {
     [8]: "Super Rare",
   };
 
-  valueElement.html(valueInfo); 
+  valueElement.html(valueInfo);
 
-  
-
-  
-
-//background of canvas
+  //background of canvas
   clear();
   // create a blank new image
   let sample = createImage(newWidth, newWidth);

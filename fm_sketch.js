@@ -3,11 +3,30 @@
 let img;
 let newWidth = 10;
 let slider;
+let sliderMin;
+let sliderMax;
+let sliderGap;
 let cWidth;
 let canvasParent = document.getElementById("p5-script");
+let startYear = 2001;
 
-let originalPrice = 49;
+// get the current year and calculate the jump
+// const d = new Date();
+// let currentYear = d.getFullYear();
+// let jump = currentYear - startYear;
+let jump = 22;
+
+let originalPrice = 0.39;
+let priceIn2023 = 1.4;
+let inflation = (priceIn2023 - originalPrice) / originalPrice;
+console.log("inflation: ", inflation);
 let costPerYear = (originalPrice * 6) / 100;
+
+//let priceIn2023 = 1.40; // Price off eggs in 2023
+//let annualInflationRate = 0.1177; // (11.77% is Average annual inflation rate from 2001 to 2023
+//let costPerDecade = originalPrice * annualInflationRate;
+//let numberOfYears = 10; // Number of years from 2023 to 2033
+//const priceInYear = priceIn2001 * Math.pow((1 + annualInflationRate), years);
 
 let priceElement;
 
@@ -24,20 +43,27 @@ function setup() {
   slider = select("#yeardate");
   // slider.style("width", cWidth + "px");
   priceElement = select("#price-number");
+  yearElement = select("#projector-info-year");
+  valueElement = select("#projector-info-rarity");
+  sliderMin = slider.elt.getAttribute("min");
+  sliderMax = slider.elt.getAttribute("max");
 }
 
 function draw() {
-  let max = slider.elt.getAttribute("max");
-  newWidth = max - slider.value();
+  newWidth = sliderMax - slider.value();
   if (newWidth == 0) newWidth = 1;
 
+  // console.log(Math.pow(1 + inflation, slider.value() / 10));
+  let newPrice = originalPrice * Math.pow(1 + inflation, slider.value() / 10);
   // change the price
   let price = originalPrice + (slider.value() * costPerYear) / 10;
   // round to 2 decimal places
   price = Math.round(price * 100) / 100;
   // add trailing zeros
   price = price.toFixed(2);
-  priceElement.html(price);
+  priceElement.html(newPrice.toFixed(2));
+
+  yearElement.html(startYear + (slider.value() / 10) * jump);
 
   clear();
   // create a blank new image
