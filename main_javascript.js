@@ -1,19 +1,30 @@
 let menuOpen = false;
 
 function toggleMenu() {
-  TweenMax.to(".menu-list-container", 1, { // Update duration to 0.5 seconds for a smoother animation
+  // Update duration to 0.5 seconds for a smoother animation
+  TweenMax.to(".menu-list-container", 0.5, {
     right: menuOpen ? "-25%" : 0,
     ease: Power3.easeInOut,
   });
 
-  TweenMax.to("main", 1, { // Update duration to 0.5 seconds for a smoother animation
+  // Update duration to 0.5 seconds for a smoother animation
+  TweenMax.to("main", 0.5, {
     left: menuOpen ? 0 : "-25%",
     ease: Power3.easeInOut,
     onComplete: function() {
       menuOpen = !menuOpen; // Set menuOpen to false after the animation is complete
+
+      // Update the menu icon to an "X" when the menu is open, or back to the original state when closed
+      const menuIcon = document.querySelector(".menu-btn");
+      if (menuOpen) {
+        menuIcon.classList.add("open");
+      } else {
+        menuIcon.classList.remove("open");
+      }
     }
   });
 }
+
 
 // Event listeners to menu links
 const menuLinks = document.querySelectorAll(".menu-list-container a");

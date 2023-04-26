@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'PPNeueBit';
+  src: url(../Fonts/PPNeueBit-Bold.woff) format('woff'),
+   url(../Fonts/PPNeueBit-Regular.woff)format('woff');
+}
+
 @viewport {
   width: device-width;
   zoom: 1;
@@ -58,6 +64,12 @@ input[type="range"]::-webkit-slider-thumb {
   width: 2rem;    
 }
 
+input[type=range]:hover::-webkit-slider-thumb {
+  background: linear-gradient(303deg, rgba(156,185,252,1) 0%, rgba(196,242,229,1) 32%, rgba(204,177,252,1) 100%);
+  outline: none;
+  cursor: pointer;
+}
+
 /* Thumb Styles for: Firefox */
 input[type="range"]::-moz-range-thumb {
   border: none; /*Removes extra border that FF applies*/
@@ -66,6 +78,7 @@ input[type="range"]::-moz-range-thumb {
   height: 2rem;
   width: 2rem;
 }
+
 
 
 /*canvas {
@@ -87,7 +100,7 @@ a {
 .menu-nav-bar {
   position: fixed;
   width: 100%;
-  height: 60px;
+  height: 80px;
   background: #f3f2ee;
   z-index: 100;
 }
@@ -98,8 +111,7 @@ a {
   top: 0;
   right: 0;
   height: 80px;
-  font-size: 40px;
-  padding: 0.4em;
+  font-size: 45px;
   padding-right: 0.8em;
   text-transform: uppercase;
   cursor: pointer;
@@ -107,12 +119,58 @@ a {
   border: 1px solid transparent;
 }
 
+
+/* CSS styles for the menu icon when menu is open */
+.menu-btn.open {
+  /* Styles for the "X" icon here */
+  content: "";
+  position: fixed;
+  display: block;
+  top: 0;
+  right: 0;
+  height: 80px;
+  padding-right: 0.8em;
+  text-transform: uppercase;
+  cursor: pointer;
+  z-index: 99;
+  border: 1px solid transparent;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+}
+
+/* Pseudo-element ::before for top diagonal line of "X" */
+.menu-btn.open::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #000;
+  transform: rotate(45deg);
+}
+
+/* Pseudo-element ::after for bottom diagonal line of "X" */
+.menu-btn.open::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #000;
+  transform: rotate(-45deg);
+}
+
+
+
 .menu-list-container {
   position: fixed;
+  display: block;
   width: 25%;
   height: 100%;
   border-left: 2.7px solid #000;
-  display: block;
   padding-top: 10em;
   right: -25%;
   z-index: 97;
@@ -131,20 +189,25 @@ main {
 
 .items-section ul > li a {
   display: block;
-  line-height: 2.2em;
+  line-height: 1.7em;
   transition: all 0.3s;
-  font-size: 40px;
+  font-family: PPNeueBit, bold;
+  font-size: 55px;
   font-weight: normal;
   padding-left: 20px;
   width: 100%;
   text-transform: uppercase;
-  color: #000;
+  color: black;
   border-bottom: solid 2.7px #000;
 }
 
 .items-section ul > li a:hover {
-  font-family: VT323;
-  font-size: 40px;
+  font-family: PPNeueBit, bold;
+  font-size: 55px;
+  transition: 0.5s;
+  background: linear-gradient(90deg, var(--c1, #9cb9fc), var(--c2, #c4f2e5) 51%, var(--c1, #ccb1fc))
+  var(--x, 0)/ 200%;
+  --x: 100%; 
 }
 
 .navlist {
@@ -162,7 +225,7 @@ main {
 
 .divider1 {
   display: block;
-  width: 90%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
@@ -172,7 +235,7 @@ main {
 
 .divider2 {
   display: block;
-  width: 90%;
+  width: 85%;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
@@ -189,8 +252,8 @@ main {
 }
 
 .intro__content {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 110px;
+  margin-right: 110px;
   margin-top: 40px;
   margin-bottom: 90px;
   align-items: center;
@@ -228,8 +291,8 @@ main {
 }
 
 .projector-title__content {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 110px;
+  margin-right: 110px;
   margin-top: 40px;
   margin-bottom: 40px;
   align-items: center;
@@ -239,6 +302,8 @@ main {
 
 .projectortitle-img {
   display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
   width: 30%;
@@ -271,10 +336,12 @@ main {
   grid-template-columns: 1fr 1fr;
   margin-top: 30px;
   margin-bottom: 90px;
+  margin-left: 6vw;
+  margin-right: 6vw;
 }
 
 .projector-info-title {
-  font-family: VT323;
+  font-family: PPNeueBit, bold;
   font-weight: 900;
   font-size: 40px;
   text-transform: uppercase;
@@ -293,7 +360,6 @@ main {
   line-height: 35px;
   border-bottom: 2px solid #000;
   padding-top: 9px;
-  padding-left: 15px;
 }
 
 /*Digi Food Intro Section*/
@@ -305,8 +371,8 @@ main {
 }
 
 .digi-intro__content {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 110px;
+  margin-right: 110px;
   margin-top: 40px;
   margin-bottom: 80px;
   align-items: center;
@@ -345,8 +411,8 @@ main {
   column-gap: 50px;
   row-gap: 40px;
   margin-top: 30px;
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 125px;
+  margin-right: 125px;
 }
 
 .digi_thumbnail {
@@ -362,7 +428,7 @@ main {
 }
 
 .food-info-title {
-  font-family: VT323;
+  font-family: PPNeueBit, bold;
   font-weight: 900;
   font-size: 40px;
   text-transform: uppercase;
@@ -415,7 +481,7 @@ main {
 
 .current-time,
 .current-date {
-  font-family: VT323;
+  font-family: "VT323", monospace;
   font-weight: 400;
   font-size: 40px;
   text-align: center;

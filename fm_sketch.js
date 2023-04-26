@@ -31,7 +31,7 @@ let costPerYear = (originalPrice * 6) / 100;
 let priceElement;
 
 function preload() {
-  img = loadImage("fried_egg_no-pixel_500.png");
+  img = loadImage("egg.png");
   // slider = createSlider(1, 100, newWidth, 1)
 }
 
