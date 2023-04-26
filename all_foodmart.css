@@ -33,7 +33,7 @@ button {
 
 /** Slider CSS ***/
 #yeardate {
-  margin-top: 70px;
+  margin-top: 60px;
   width: min(60vw, 60vh);
   -webkit-appearance: none;
   appearance: none;
@@ -42,15 +42,15 @@ button {
 /* Track Styles for: Chrome, Safari, Opera, and Edge */
 input[type="range"]::-webkit-slider-runnable-track {
   height: 0.2rem;
-  background: #000000; /* Grey background */
+  background: #000000;
   outline: none;
   cursor: pointer;
 }
 
 /* Track Styles for: Firefox */
 input[type="range"]::-moz-range-track {
-  background: #053a5f;
-  height: 0.5rem;
+  background: #000000;
+  height: 0.2rem;
 }
 
 /* Thumb Styles for: Chrome, Safari, Opera, and Edge */
@@ -79,6 +79,10 @@ input[type="range"]::-moz-range-thumb {
   width: 2rem;
 }
 
+input[type=range]:hover::-moz-range-thumb {
+  background: linear-gradient(303deg, rgba(156,185,252,1) 0%, rgba(196,242,229,1) 32%, rgba(204,177,252,1) 100%);
+  cursor: pointer;
+}
 
 
 /*canvas {
@@ -336,8 +340,9 @@ main {
   grid-template-columns: 1fr 1fr;
   margin-top: 30px;
   margin-bottom: 90px;
-  margin-left: 6vw;
-  margin-right: 6vw;
+  padding-left: 200px;
+  padding-right: 200px;
+
 }
 
 .projector-info-title {
