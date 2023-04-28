@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'PPNeueBit';
-  src: url(../Fonts/PPNeueBit-Bold.woff) format('woff'),
-   url(../Fonts/PPNeueBit-Regular.woff)format('woff');
+  src: url(./Fonts/PPNeueBit-Bold.woff) format('woff'),
+   url(./Fonts/PPNeueBit-Regular.woff)format('woff');
 }
 
 @viewport {
@@ -130,8 +130,8 @@ a {
   content: "";
   position: fixed;
   display: block;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 20px;
   height: 80px;
   padding-right: 0.8em;
   text-transform: uppercase;
@@ -141,6 +141,7 @@ a {
   background-color: transparent;
   width: 30px;
   height: 30px;
+  color: transparent
 }
 
 /* Pseudo-element ::before for top diagonal line of "X" */

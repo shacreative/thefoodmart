@@ -16,9 +16,9 @@ function toggleMenu() {
 
       // Update the menu icon to an "X" when the menu is open, or back to the original state when closed
       const menuIcon = document.querySelector(".menu-btn");
-      if (menuOpen) {
-        menuIcon.classList.add("open");
-      } else {
+     if (menuOpen) {
+       menuIcon.classList.add("open");
+     } else {
         menuIcon.classList.remove("open");
       }
     }
