@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'PPNeueBit';
   src: url(./Fonts/PPNeueBit-Bold.woff) format('woff'),
-   url(./Fonts/PPNeueBit-Regular.woff)format('woff');
+   url(./Fonts/PPNeueBit-Regular.woff) format('woff');
 }
 
 @viewport {
@@ -130,8 +130,8 @@ a {
   content: "";
   position: fixed;
   display: block;
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
   height: 80px;
   padding-right: 0.8em;
   text-transform: uppercase;
