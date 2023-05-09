@@ -31,7 +31,7 @@ let costPerYear = (originalPrice * 6) / 100;
 let priceElement;
 
 function preload() {
-  img = loadImage("egg.png");
+  img = loadImage("Pixel_fried_Egg_Final.png");
   // slider = createSlider(1, 100, newWidth, 1)
 }
 
@@ -65,9 +65,26 @@ function draw() {
 
   yearElement.html(startYear + (slider.value() / 10) * jump);
 
-  let valueInfo = ["Plenty", "Sufficient", "Limited", "Super Rare"];
-  let valueIndex = Math.floor((slider.value() / 101) * valueInfo.length);
-  valueElement.html(valueInfo[valueIndex]);
+  let valueInfo = ["Plenty", "Sufficient", "Limited", "Rare", "Super Rare"];
+  let valueIndex;
+
+if (slider.value() === 0) {
+  valueIndex = 0; // "Plenty" on first step
+} else if (slider.value() === 10) {
+  valueIndex = 1; // "Sufficient" on second step
+} else {
+  let numRemainingSteps = valueInfo.length - 2;
+  let remainingStepSize = (sliderMax - 10) / numRemainingSteps;
+  let remainingStepIndex = Math.floor((slider.value() - 10) / remainingStepSize);
+  
+  // Ensure that remainingStepIndex is within the bounds of the remaining steps
+  remainingStepIndex = Math.min(remainingStepIndex, numRemainingSteps - 1);
+  
+  valueIndex = remainingStepIndex + 2;
+}
+
+valueElement.html(valueInfo[valueIndex]);
+  
 
   clear();
   // create a blank new image

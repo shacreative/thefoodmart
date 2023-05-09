@@ -65,7 +65,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type=range]:hover::-webkit-slider-thumb {
-  background: linear-gradient(303deg, rgba(156,185,252,1) 0%, rgba(196,242,229,1) 32%, rgba(204,177,252,1) 100%);
+  background: linear-gradient(303deg, rgba(132,86,207,1) 9%, rgba(204,177,252,1) 46%, rgba(216,210,219,1) 82%);
   outline: none;
   cursor: pointer;
 }
@@ -80,7 +80,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 input[type=range]:hover::-moz-range-thumb {
-  background: linear-gradient(303deg, rgba(156,185,252,1) 0%, rgba(196,242,229,1) 32%, rgba(204,177,252,1) 100%);
+  background: linear-gradient(303deg, rgba(132,86,207,1) 9%, rgba(204,177,252,1) 46%, rgba(216,210,219,1) 82%);
   cursor: pointer;
 }
 
@@ -210,7 +210,7 @@ main {
   font-family: PPNeueBit, bold;
   font-size: 55px;
   transition: 0.5s;
-  background: linear-gradient(90deg, var(--c1, #9cb9fc), var(--c2, #c4f2e5) 51%, var(--c1, #ccb1fc))
+  background: linear-gradient(90deg, var(--c1, #8456cf), var(--c2, #d8d2db) 51%, var(--c1, #ccb1fc))
   var(--x, 0)/ 200%;
   --x: 100%; 
 }
