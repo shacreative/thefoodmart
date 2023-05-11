@@ -459,15 +459,17 @@ main {
   display: grid;
   box-sizing: border-box;
   grid-row: 100px;
+
 }
 
 .video__container {
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-left: 280px;
+  margin-right: 280px;
+  margin-top: 70px;
+  margin-bottom: 70px;
   align-items: center;
   background-color: #f3f2ee;
+
 }
 
 /*Date and Time Section*/
